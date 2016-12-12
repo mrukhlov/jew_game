@@ -15,6 +15,18 @@ $(document).ready(function () {
     var per_click = localStorage.getItem("per_click");
     if (per_click && per_click.length > 0) {per_click = parseInt(localStorage.per_click)} else {per_click = 1}
 
+    var first_q = localStorage.getItem("first_q");
+    if (first_q && first_q.length > 0) {first_q = parseInt(localStorage.first_q)} else {first_q = 0}
+
+    var second_q = localStorage.getItem("second_q");
+    if (second_q && second_q.length > 0) {second_q = parseInt(localStorage.second_q)} else {second_q = 0}
+
+    var third_q = localStorage.getItem("third_q");
+    if (third_q && third_q.length > 0) {third_q = parseInt(localStorage.third_q)} else {third_q = 0}
+
+    var forth_q = localStorage.getItem("forth_q");
+    if (forth_q && forth_q.length > 0) {forth_q = parseInt(localStorage.forth_q)} else {forth_q = 0}
+
     // var income_rate = 0;
     // var per_click = 1;
     // var stolen = 0;
@@ -71,27 +83,39 @@ $(document).ready(function () {
     $('.first').click(function () {
         current -= 50;
         income_rate += 1;
+        first_q += 1;
         localStorage.setItem("income_rate", parseInt(income_rate));
+        localStorage.setItem("first_q", parseInt(first_q));
+        $('.first_q').text(first_q);
     });
 
     $('.second').click(function () {
         current -= 500;
         income_rate += 3;
         per_click += 2;
+        second_q += 1;
         localStorage.setItem("income_rate", parseInt(income_rate));
         localStorage.setItem("per_click", parseInt(per_click));
+        localStorage.setItem("second_q", parseInt(second_q));
+        $('.second_q').text(second_q);
     });
 
     $('.third').click(function () {
         current -= 5000;
         per_click += 10;
+        third_q += third_q;
         localStorage.setItem("per_click", parseInt(per_click));
+        localStorage.setItem("third_q", parseInt(third_q));
+        $('.third_q').text(third_q);
     });
 
     $('.forth').click(function () {
         current -= 50000;
         income_rate += 10;
+        forth_q += 1;
         localStorage.setItem("income_rate", parseInt(income_rate));
+        localStorage.setItem("forth_q", parseInt(forth_q));
+        $('.forth_q').text(forth_q);
     });
 
     // $('.stop_button').click(function () {
