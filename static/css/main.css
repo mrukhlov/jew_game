@@ -1,0 +1,45 @@
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.control {
+    /*height: 130px;*/
+    /*width: 130px;*/
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid #C0C0C0;
+    height: calc(130px - 1px);
+    width: calc(130px - 1px);
+    background-color: #DDDDDD;
+    border-radius: 2%;
+    margin: 10px;
+}
+
+.zero {
+    /*height: 99px;*/
+    /*width: 99px;*/
+}
+
+.first {
+    /*background-color: #269abc;*/
+}
+
+.second {
+    /*background-color: greenyellow;*/
+}
+
+.third {
+    /*background-color: tomato;*/
+}
+
+.forth {
+    /*background-color: gold;*/
+}
