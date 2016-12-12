@@ -51,7 +51,7 @@ $(document).ready(function () {
             if ($('.first').attr('disabled') == 'disabled') {
                 $('.first').prop("disabled", false)
             }
-        } else if (current >= 500) {
+        } else if (current >= 500 && current <= 4999) {
             if ($('.second').attr('disabled') == 'disabled') {
                 $('.second').prop("disabled", false)
             }
