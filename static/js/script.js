@@ -57,11 +57,11 @@ $(document).ready(function () {
             }
         } else if (current >= 5000) {
             if ($('.third').attr('disabled') == 'disabled') {
-                $('.second').prop("disabled", false)
+                $('.third').prop("disabled", false)
             }
         } else if (current >= 50000) {
             if ($('.forth').attr('disabled') == 'disabled') {
-                $('.second').prop("disabled", false)
+                $('.forth').prop("disabled", false)
             }
         } else {
             $('.first').prop("disabled", true);
