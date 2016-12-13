@@ -152,7 +152,7 @@ $(document).ready(function () {
     $('.third').click(function () {
         current -= 5000;
         per_click += 10;
-        third_q += third_q;
+        third_q += 1;
         localStorage.setItem("per_click", parseInt(per_click));
         localStorage.setItem("third_q", parseInt(third_q));
         $('.third_q').text(third_q);
