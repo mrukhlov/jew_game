@@ -3,8 +3,6 @@
  */
 $(document).ready(function () {
 
-    // localStorage.clear();
-
     var current = localStorage.getItem("current");
     if (current && current.length > 0) {current = parseInt(localStorage.current)} else {current = 0}
 
@@ -141,5 +139,9 @@ $(document).ready(function () {
     //     clearInterval(init_interval);
     //     current = 0;
     // });
+
+    $('.reset_storage').click(function () {
+        localStorage.clear();
+    });
 
 });
