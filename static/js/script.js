@@ -142,6 +142,7 @@ $(document).ready(function () {
 
     $('.reset_storage').click(function () {
         localStorage.clear();
+        window.localStorage.clear();
     });
 
 });
