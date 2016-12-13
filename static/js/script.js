@@ -3,6 +3,8 @@
  */
 $(document).ready(function () {
 
+    // localStorage.clear();
+
     var current = localStorage.getItem("current");
     if (current && current.length > 0) {current = parseInt(localStorage.current)} else {current = 0}
 
@@ -31,6 +33,11 @@ $(document).ready(function () {
     // var per_click = 1;
     // var stolen = 0;
 
+    $('.first_q').text(first_q);
+    $('.second_q').text(second_q);
+    $('.third_q').text(third_q);
+    $('.forth_q').text(forth_q);
+
     var increment = function () {
         current += income_rate;
         stolen += income_rate;
@@ -51,24 +58,36 @@ $(document).ready(function () {
             if ($('.first').attr('disabled') == 'disabled') {
                 $('.first').prop("disabled", false)
             }
-        } else if (current >= 500 && current <= 4999) {
+        } else {
+                $('.first').prop("disabled", true);
+            }
+        if (current >= 500) {
             if ($('.second').attr('disabled') == 'disabled') {
                 $('.second').prop("disabled", false)
             }
-        } else if (current >= 5000) {
+        } else {
+                $('.second').prop("disabled", true);
+            }
+        if (current >= 5000) {
             if ($('.third').attr('disabled') == 'disabled') {
                 $('.third').prop("disabled", false)
             }
-        } else if (current >= 50000) {
+        } else {
+                $('.third').prop("disabled", true);
+            }
+        if (current >= 50000) {
             if ($('.forth').attr('disabled') == 'disabled') {
                 $('.forth').prop("disabled", false)
             }
         } else {
-            $('.first').prop("disabled", true);
-            $('.second').prop("disabled", true);
-            $('.third').prop("disabled", true);
-            $('.forth').prop("disabled", true);
+                $('.forth').prop("disabled", true);
         }
+        // }else {
+        //     $('.first').prop("disabled", true);
+        //     $('.second').prop("disabled", true);
+        //     $('.third').prop("disabled", true);
+        //     $('.forth').prop("disabled", true);
+        // }
     }, 100);
 
     init_interval;
