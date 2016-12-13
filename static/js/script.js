@@ -4,28 +4,60 @@
 $(document).ready(function () {
 
     var current = localStorage.getItem("current");
-    if (current && current.length > 0) {current = parseInt(localStorage.current)} else {current = 0}
+    if (current && current.length > 0) {
+        current = parseInt(localStorage.current)
+    } else {
+        current = 0
+    }
 
     var stolen = localStorage.getItem("stolen");
-    if (stolen && stolen.length > 0) {stolen = parseInt(localStorage.stolen)} else {stolen = 0}
+    if (stolen && stolen.length > 0) {
+        stolen = parseInt(localStorage.stolen)
+    } else {
+        stolen = 0
+    }
 
     var income_rate = localStorage.getItem("income_rate");
-    if (income_rate && income_rate.length > 0) {income_rate = parseInt(localStorage.income_rate)} else {income_rate = 0}
+    if (income_rate && income_rate.length > 0) {
+        income_rate = parseInt(localStorage.income_rate)
+    } else {
+        income_rate = 0
+    }
 
     var per_click = localStorage.getItem("per_click");
-    if (per_click && per_click.length > 0) {per_click = parseInt(localStorage.per_click)} else {per_click = 1}
+    if (per_click && per_click.length > 0) {
+        per_click = parseInt(localStorage.per_click)
+    } else {
+        per_click = 1
+    }
 
     var first_q = localStorage.getItem("first_q");
-    if (first_q && first_q.length > 0) {first_q = parseInt(localStorage.first_q)} else {first_q = 0}
+    if (first_q && first_q.length > 0) {
+        first_q = parseInt(localStorage.first_q)
+    } else {
+        first_q = 0
+    }
 
     var second_q = localStorage.getItem("second_q");
-    if (second_q && second_q.length > 0) {second_q = parseInt(localStorage.second_q)} else {second_q = 0}
+    if (second_q && second_q.length > 0) {
+        second_q = parseInt(localStorage.second_q)
+    } else {
+        second_q = 0
+    }
 
     var third_q = localStorage.getItem("third_q");
-    if (third_q && third_q.length > 0) {third_q = parseInt(localStorage.third_q)} else {third_q = 0}
+    if (third_q && third_q.length > 0) {
+        third_q = parseInt(localStorage.third_q)
+    } else {
+        third_q = 0
+    }
 
     var forth_q = localStorage.getItem("forth_q");
-    if (forth_q && forth_q.length > 0) {forth_q = parseInt(localStorage.forth_q)} else {forth_q = 0}
+    if (forth_q && forth_q.length > 0) {
+        forth_q = parseInt(localStorage.forth_q)
+    } else {
+        forth_q = 0
+    }
 
     // var income_rate = 0;
     // var per_click = 1;
@@ -57,28 +89,28 @@ $(document).ready(function () {
                 $('.first').prop("disabled", false)
             }
         } else {
-                $('.first').prop("disabled", true);
-            }
+            $('.first').prop("disabled", true);
+        }
         if (current >= 500) {
             if ($('.second').attr('disabled') == 'disabled') {
                 $('.second').prop("disabled", false)
             }
         } else {
-                $('.second').prop("disabled", true);
-            }
+            $('.second').prop("disabled", true);
+        }
         if (current >= 5000) {
             if ($('.third').attr('disabled') == 'disabled') {
                 $('.third').prop("disabled", false)
             }
         } else {
-                $('.third').prop("disabled", true);
-            }
+            $('.third').prop("disabled", true);
+        }
         if (current >= 50000) {
             if ($('.forth').attr('disabled') == 'disabled') {
                 $('.forth').prop("disabled", false)
             }
         } else {
-                $('.forth').prop("disabled", true);
+            $('.forth').prop("disabled", true);
         }
         // }else {
         //     $('.first').prop("disabled", true);
